@@ -1,0 +1,5 @@
+[
+ {"Name":"small", "BaseSize": 9.99, "Price": 200 },
+  { "Name":"medium", "BaseSize": 12.99, "Price": 300 },
+  { "Name":"large", "BaseSize": 16.99, "Price": 500 }
+]
