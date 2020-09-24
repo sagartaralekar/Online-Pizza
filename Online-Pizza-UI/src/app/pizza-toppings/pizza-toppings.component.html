@@ -1,0 +1,12 @@
+
+<label>Select Topping</label> 
+<div class="container">
+  <div class="name" *ngFor= "let topping of toppings">
+    <div (click)= selectToppings(topping)>
+        <span class=" icon {{topping.name}}"></span>
+        <span>
+          {{topping.name}} ({{topping.price | currency:'INR'}})
+        </span>
+    </div>
+  </div>
+</div>
