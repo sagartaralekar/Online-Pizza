@@ -1,0 +1,28 @@
+
+<app-pizza-toppings  
+[pizzas]="pizzas"
+(addTopping)="addToppings($event)"></app-pizza-toppings>
+
+<div class="section">
+<div class="createPizza,input">
+  <button (click)= createPizza() >Create Pizza</button>
+</div>
+
+<div class="input" style="margin-left: 10px;">
+  <label>Pizza Size:</label> 
+  <select [(ngModel)]="pizzaSizeSelected">
+    <option *ngFor="let size of pizzaSizes">{{size.name}}</option>
+  </select>
+</div>
+<div class="input" style="margin-left: 10px;">
+  Total Prize: {{ totalPrize | currency:'INR':true }}
+</div>
+</div>
+
+<div *ngFor="let pizza of pizzas.controls; let i = index;">
+  <div class="delete"
+          (click)="removeSelectedPizza(i)">
+          <label>Remove</label>
+        </div>
+  <pizza-creater [Pizza]="pizza"  ></pizza-creater>
+</div> 
